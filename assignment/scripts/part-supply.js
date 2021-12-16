@@ -30,9 +30,23 @@ console.log('5. Adding 25 to supplyChanges.', supplyChanges);
 //    - if the value is negative, format the log as 'Removed x parts.'
 
 console.log('6. Showing supplyChanges...');
-for(let x=0; x<supplyChanges.length; x++){
-  console.log('for loop', supplyChanges[x]);
+
+// NOTE FROM COLIN HERE:
+// For question 6, I was having trouble figuring out why the "added x parts" was
+// split when you check the console. I suspect it is because of the order of the
+// variables within the loop.
+for (var x of supplyChanges){
+  if (x > 0){
+    console.log('Added x parts', x);
+  }
+  if (x == 0){
+    console.log('no change', x);
+  }
+  if (x < 0){
+    console.log('Removed x parts', x);
+  }
 }
+
 
 
 // STRETCH GOALS
